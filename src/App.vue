@@ -6,7 +6,7 @@
       <!-- page01 -->
       <div id="page01">
         <div class=" content w-full flex justify-center items-center">
-          <h1 id="title" class="text-white text-7xl mt-40 sm:w-4/5">
+          <h1 id="title" class="text-white text-7xl mt-40">
             <span class="border-t-4 border-red-500">P</span>ROGRAMMING <br />
             CHALLANGE
           </h1>
@@ -35,14 +35,14 @@
       </div>
       <!-- page02 -->
       <div id="page02">
-        <div class="p-24 content sm:w-3/5">
-          <h2 class="text-white text-5xl sm:text-sm">
+        <div id="md-02Content" class="p-24 content sm:w-3/5">
+          <h2 id="md-hContent" class="text-white text-5xl sm:text-sm">
             <br />
             Young Talent is waiting for you <br />
             new program and business innovation by
           </h2>
           <br /><br />
-          <p class="text-white text-3xl font-serif">
+          <p id="md-pContent" class="text-white text-3xl font-serif">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -51,7 +51,7 @@
         </div>
         <br />
         <!-- controlPage -->
-        <div class="w-full controlPage">
+        <div id="md-02Control" class="w-full controlPage">
           <div class="text-white flex justify-end">
             <div class="pr-14">
               <div>02</div>
@@ -77,8 +77,8 @@
     <section id="page03-04">
       <!-- page03 -->
       <div id="page03" class="pt-36 sm:text-sm">
-        <div class="w-full flex justify-center items-center content">
-          <h1 class="text-white text-5xl">
+        <div class=" md:p-12 w-full flex justify-center items-center content">
+          <h1 id="md-3Content" class="text-white text-5xl">
             It has survived not only five centuries, <br />
             but also the leap into electronic typesetting, remaining <br />
             essentially unchanged. <br />
@@ -110,13 +110,17 @@
       </div>
       <!-- page04 -->
       <div id="page04">
-        <div class="w-full flex justify-center" style="height:120vh">
+        <div
+          id="md-4Content"
+          class="w-full flex justify-center"
+          style="height:120vh"
+        >
           <div>
             <h1 class="text-white text-5xl text-center pb-10">
               WHY DO WE USE IT?
             </h1>
             <br />
-            <div class="grid grid-rows-2 grid-flow-col gap-8">
+            <div  id="sm-04Content" class="md:grid-rows-4 grid grid-rows-2 grid-flow-col gap-8">
               <!-- box1 -->
               <div class="box">
                 <div class="w-full flex justify-center p-6">
@@ -265,7 +269,7 @@
           </div>
         </div>
         <!-- controlPage -->
-        <div class="w-full" style="height:50vh">
+        <div id="md-4Btn" class="w-full" style="height:50vh">
           <div class="text-white flex justify-end">
             <div class="pr-14">
               <div>04</div>
@@ -321,7 +325,10 @@
               <button class="btn">read more</button>
             </div>
           </div>
-          <div class="w-2/6 bg-center bg-no-repeat bg-cover relative" v-show="showImg2">
+          <div
+            class="w-2/6 bg-center bg-no-repeat bg-cover relative"
+            v-show="showImg2"
+          >
             <img
               class="object-cover w-full"
               style="height:351px"
@@ -392,7 +399,7 @@
             <img src="./assets/Icon/bt-down.svg" alt="" />
           </div>
         </div>
-        <div class="w-full flex justify-center">
+        <div id="footer" class="w-full flex justify-center">
           <label class="mr-10 text-white font-serif text-xs"
             >© 2021 PROGRAMMING. CHALLANGE</label
           >
@@ -443,7 +450,7 @@ export default {
     let activeImg4 = ref("");
     let numImg1 = ref("1");
     let numImg2 = ref("2");
-    let showImg2= ref(true);
+    let showImg2 = ref(true);
     function clickImg1() {
       activeImg1.value = "-active";
       activeImg2.value = "";
@@ -558,5 +565,102 @@ h2 {
   position: absolute;
   top: 52%;
   z-index: 999;
+}
+@media (max-width: 768px) {
+  #page01-02 {
+    background-image: url("./assets/Home/Bg/Tablet/bg01-02.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200vh;
+  }
+  #title {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  #md-hContent {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  #md-pContent {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  #md-3Content {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  #page03-04 {
+    background-image: url("./assets/Home/Bg/Tablet/bg03-04.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400vh;
+  }
+  #md-4Btn {
+    height: 100vh !important;
+  }
+  #md-4Content {
+    height: 250vh !important;
+  }
+}
+@media (max-width: 375px) {
+  #page01-02 {
+    background-image: url("./assets/Home/Bg/Mobile/bg01-02.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120vh;
+  }
+  #page03-04 {
+    background-image: url("./assets/Home/Bg/Mobile/bg03-04.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 430vh;
+  }
+  #title {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  #md-hContent {
+    width: 70vw;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    /* margin-top: -100px; */
+    margin-left: -70px;
+  }
+  #md-pContent {
+    width: 70vw;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin-left: -70px;
+  }
+  #md-02Control {
+    height: 80vh;
+  }
+  #md-02Content {
+    height: 40vh;
+  }
+  #md-3Content {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-top: 80%;
+  }
+  #md-4Btn{
+    margin-top: 160px;
+
+
+  }
+  #lastpage {
+  background-image: url("./assets/Home/Bg/Mobile/bg-last.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150vh;
+}
+#footer{
+  margin-top: 100px;
+}
 }
 </style>

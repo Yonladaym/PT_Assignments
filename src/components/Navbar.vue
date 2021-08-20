@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="w-full flex justify-between bg-black  bg-opacity-10 h-1/6 px-8 py-2 fixed"
+      class="w-full flex justify-between bg-black  bg-opacity-10 h-1/6 px-10 py-4 fixed"
     >
       <img src="../assets/logo.svg" alt="" />
 
